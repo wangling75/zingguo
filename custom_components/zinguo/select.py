@@ -32,7 +32,7 @@ class ZinguoLinkSelect(SelectEntity):
 
     def __init__(self, coordinator, api, mac):
         self.coordinator, self.api, self.mac = coordinator, api, mac
-        self._attr_name = f"浴霸 联动模式 ({mac[-4:]})"
+        self._attr_name = f"联动模式 ({mac[-4:]})"
         self._attr_unique_id = f"zinguo_{mac}_linkage"
 
     @property
@@ -53,7 +53,7 @@ class ZinguoMotoSelect(SelectEntity):
 
     def __init__(self, coordinator, api, mac):
         self.coordinator, self.api, self.mac = coordinator, api, mac
-        self._attr_name = f"浴霸 电机模式 ({mac[-4:]})"
+        self._attr_name = f"电机模式 ({mac[-4:]})"
         self._attr_unique_id = f"zinguo_{mac}_moto_ver"
 
     @property
