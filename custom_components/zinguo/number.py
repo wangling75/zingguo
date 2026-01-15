@@ -30,7 +30,7 @@ class ZinguoConfigNumber(NumberEntity):
     """通用滑块设置"""
     def __init__(self, coordinator, api, mac, name, key, v_min, v_max, icon):
         self.coordinator, self.api, self.mac, self.key = coordinator, api, mac, key
-        self._attr_name = f"浴霸 {name} ({mac[-4:]})"
+        self._attr_name = f"{name} ({mac[-4:]})"
         self._attr_native_min_value, self._attr_native_max_value = v_min, v_max
         self._attr_unique_id = f"zinguo_{mac}_{key}"
         self._attr_icon = icon
@@ -52,7 +52,7 @@ class ZinguoBlackTimeNumber(NumberEntity):
     """黑屏温控模式的时间设置"""
     def __init__(self, coordinator, api, mac, name, key):
         self.coordinator, self.api, self.mac, self.key = coordinator, api, mac, key
-        self._attr_name = f"浴霸 {name} ({mac[-4:]})"
+        self._attr_name = f"{name} ({mac[-4:]})"
         self._attr_native_min_value, self._attr_native_max_value = 1, 30
         self._attr_unique_id = f"zinguo_{mac}_black_{key}"
         self._attr_icon = "mdi:clock-fast"
@@ -77,7 +77,7 @@ class ZinguoLightCountdown(NumberEntity):
     """照明延时关闭倒计时 (由原来的 TimeEntity 转换而来)"""
     def __init__(self, coordinator, api, mac):
         self.coordinator, self.api, self.mac = coordinator, api, mac
-        self._attr_name = f"浴霸 照明倒计时关闭 ({mac[-4:]})"
+        self._attr_name = f"照明倒计时关闭 ({mac[-4:]})"
         self._attr_unique_id = f"zinguo_{mac}_light_countdown"
         self._attr_icon = "mdi:timer-sand"
         self._attr_native_min_value = 0
